@@ -6,10 +6,10 @@ metadata:
   labels:
     app: sales-ui 
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
-    app: sales-ui-microservice
+    app: sales-ui
   ports:
     - port: 8000
-      targetPort: 8000
+      targetPort: 3000
       protocol: TCP
